@@ -1,5 +1,5 @@
-FROM mercury/icat:4-base
-MAINTAINER Colin Nolan <hgi@sanger.ac.uk>
+FROM heinedej/icat:4-base
+MAINTAINER Heine de Jager <heinedej@gmail.com>
 
 ENV RENCI_URL=https://packages.irods.org
 
@@ -17,3 +17,6 @@ ADD responses.txt /tmp/responses.txt
 
 # FIXME: Temp
 ENV IRODS_VERSION=4.2.0
+
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
+

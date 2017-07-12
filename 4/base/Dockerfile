@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Colin Nolan <hgi@sanger.ac.uk>
+MAINTAINER Heine de Jager <heinedej@gmail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
@@ -30,6 +30,7 @@ WORKDIR /root
 ADD start-irods.sh start-irods.sh
 ADD start.sh start.sh
 CMD ./start.sh
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 
 

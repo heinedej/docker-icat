@@ -5,11 +5,11 @@ set -euxv -o pipefail
 /tmp/install-irods.sh
 
 # Setup database
-. /tmp/extract-db-settings.sh /tmp/responses.txt
-/tmp/setup-database.sh
+# . /tmp/extract-db-settings.sh /tmp/responses.txt
+# /tmp/setup-database.sh
 
 # Setup iRODS
-service postgresql start
+# service postgresql start
 /tmp/setup-irods.sh /tmp/responses.txt
 
 # The iRODS setup bakes the hostname available at build time into some unknown places, which are then used to define
@@ -24,13 +24,14 @@ cp /var/lib/irods/.irods/* /root/.irods
 
 # Create iRODS storage resource
 iinit irods123
-iadmin modresc demoResc host localhost
+# iadmin modresc demoResc host localhost
 
 # Let's just make sure iRODS seems to start okey - best to find issues now (although issues with settings being linked
 # to the build container will not be found)!
-service irods stop
-/root/start-irods.sh
+# service irods stop
+# /root/start-irods.sh
 
 # Make the world a better place
 apt-get clean
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+rm -rf /var/lib/apt/lists/* /var/tmp/*
+# rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

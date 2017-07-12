@@ -2,12 +2,12 @@ irods
 irods
 1
 1
-localhost
+master
 5432
 ICAT
 irods
 yes
-irods123
+password
 databaseSalt
 tempZone
 1247

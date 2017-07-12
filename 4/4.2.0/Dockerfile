@@ -1,5 +1,5 @@
-FROM mercury/icat:4.2-base
-MAINTAINER Colin Nolan <hgi@sanger.ac.uk>
+FROM heinedej/icat:4.2-base
+MAINTAINER Heine de Jager <heinedej@gmail.com>
 
 ENV IRODS_VERSION=4.2.0
 
