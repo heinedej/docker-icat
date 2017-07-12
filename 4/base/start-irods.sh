@@ -2,20 +2,20 @@
 set -eu -o pipefail
 
 # Start PostgreSQL
-service postgresql start
+# service postgresql start
 
 # Ensures PostgreSQL is ready to accept connections, fixing: https://github.com/wtsi-hgi/docker-icat/issues/1
-echo "Waiting for PostgreSQL to start accepting connections"
-while true
-do
-    ready=$(pg_isready || true)
-    if [[ "${ready}" == *"accepting connections"* ]];
-    then
-        break
-    fi
-    sleep 0.05 || sleep 1
-done
-echo "PostgreSQL database is accepting connections!"
+# echo "Waiting for PostgreSQL to start accepting connections"
+# while true
+# do
+#     ready=$(pg_isready || true)
+#     if [[ "${ready}" == *"accepting connections"* ]];
+#     then
+#         break
+#     fi
+#     sleep 0.05 || sleep 1
+# done
+# echo "PostgreSQL database is accepting connections!"
 
 # Run iRODS start script
 service irods start
