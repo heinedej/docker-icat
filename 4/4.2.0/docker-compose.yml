@@ -1,0 +1,16 @@
+version: "3.3"
+build:
+  context: /root/docker-icat/4/4.2.0
+  dockerfile: Dockerfile
+  image: heinedej/icat:4.2.0
+services:
+  icat:
+#  image: heinedej/icat:4.2.0
+    deploy:
+      restart_policy:
+        condition: on-failure
+    networks:
+      irods:
+    ports:
+      - 1247
+#    container_name: postgres-master

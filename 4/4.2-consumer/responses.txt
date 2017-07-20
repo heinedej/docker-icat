@@ -1,15 +1,8 @@
 irods
 irods
-1
-1
-srvubuiro001.uct.ac.za
-5432
-ICAT
-irods
-yes
-password
-databaseSalt
+2
 tempZone
+srvubuiro001.uct.ac.za
 1247
 20000
 20199

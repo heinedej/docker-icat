@@ -29,8 +29,8 @@ EXPOSE 1247
 WORKDIR /root
 ADD start-irods.sh start-irods.sh
 ADD start.sh start.sh
-CMD ./start.sh
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
+# CMD ./start.sh
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 
 
